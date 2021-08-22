@@ -5,7 +5,6 @@ Ext.define("GestionStockApp.view.main.MainView", {
     {
       xtype: "button",
       text: "My First Button",
-      badgeText: "2",
     },
     {
       xtype: "button",
