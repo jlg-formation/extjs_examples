@@ -20,6 +20,14 @@ Ext.define("GestionStockApp.view.main.MainView", {
       handler: "onDecrement",
       tooltip: "Decrement the counter.",
     },
+    {
+      xtype: "textfield",
+      name: "name",
+      fieldLabel: "Name",
+      bind: {
+        value: "{counter}",
+      },
+    },
   ],
 });
 
