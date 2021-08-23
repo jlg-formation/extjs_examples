@@ -9,3 +9,6 @@ const alice = Ext.create("GestionStockApp.utils.Person");
 alice.sayHello();
 const bob = Ext.create("GestionStockApp.utils.Person", "Bob");
 bob.sayHello();
+
+const charly = new GestionStockApp.utils.Person("Charly");
+charly.sayHello();
