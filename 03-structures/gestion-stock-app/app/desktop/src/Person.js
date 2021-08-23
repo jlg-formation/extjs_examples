@@ -1,4 +1,5 @@
 Ext.define("GestionStockApp.utils.Person", {
+  alias: "person",
   name: undefined,
   constructor: function (name) {
     console.log("calling constructor");
