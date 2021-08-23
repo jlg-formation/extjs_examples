@@ -1,4 +1,6 @@
 Ext.application({
-	extend: 'GestionStockApp.Application',
-	name: 'GestionStockApp'
+  extend: "GestionStockApp.Application",
+  name: "GestionStockApp",
 });
+
+console.log("GestionStockApp: ", GestionStockApp);
