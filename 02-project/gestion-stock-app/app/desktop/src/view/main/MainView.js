@@ -21,9 +21,9 @@ Ext.define("GestionStockApp.view.main.MainView", {
       tooltip: "Decrement the counter.",
     },
     {
-      xtype: "textfield",
-      name: "name",
-      fieldLabel: "Name",
+      xtype: "numberfield",
+      name: "counter",
+      fieldLabel: "Counter",
       bind: {
         value: "{counter}",
       },
