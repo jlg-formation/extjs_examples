@@ -2,7 +2,9 @@ Ext.define("GestionStockApp.view.main.MainView", {
   extend: "Ext.Container",
   xtype: "mainview",
   controller: "mainviewcontroller",
-
+  viewModel: {
+    type: "mainviewmodel",
+  },
   items: [
     {
       xtype: "button",
@@ -12,7 +14,11 @@ Ext.define("GestionStockApp.view.main.MainView", {
     {
       xtype: "button",
       text: "Decrement",
-      badgeText: "2",
+      bind: {
+        badgeText: "{counter}",
+      },
+      handler: "onDecrement",
+      tooltip: "Decrement the counter.",
     },
   ],
 });
