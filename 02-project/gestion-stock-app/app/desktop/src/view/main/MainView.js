@@ -2,9 +2,7 @@ Ext.define("GestionStockApp.view.main.MainView", {
   extend: "Ext.Container",
   xtype: "mainview",
   controller: "mainviewcontroller",
-  viewModel: {
-    type: "mainviewmodel",
-  },
+  viewModel: "mainviewmodel",
   items: [
     {
       xtype: "button",
