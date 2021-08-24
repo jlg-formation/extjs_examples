@@ -4,6 +4,8 @@ function removeSplash() {
   elem.parentNode.removeChild(elem);
 }
 
+// In Debug mode, Ext.MessageBox is not included.
+// Force the Dynamic Loader to include it.
 Ext.define("forceTheDynamicLoaderToRequire", {
   requires: ["Ext.MessageBox"],
 });
