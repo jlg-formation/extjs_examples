@@ -13,12 +13,12 @@ Ext.define("GestionStockApp01.Application01", {
   launch: function () {
     console.log("launch");
     this.removeSplash();
-    const container = Ext.create("Ext.Panel", {
+    const panel = Ext.create("Ext.Panel", {
       xtype: "truc",
       title: "Truc",
-      iconCls: "x-fa fa-home",
+      iconCls: "svg-stock",
       html: "The content",
     });
-    Ext.Viewport.add([container]);
+    Ext.Viewport.add([panel]);
   },
 });
