@@ -10,10 +10,14 @@ Ext.define("forceTheDynamicLoaderToRequire", {
   requires: ["Ext.MessageBox"],
 });
 
+// version:
+const version = Ext.getVersion().version;
+console.log("version: ", version);
+
 Ext.onReady(() => {
   removeSplash();
   console.log("on ready", Ext);
-  Ext.create("Ext.Container", {
+  const container = Ext.create("Ext.Container", {
     renderTo: Ext.getBody(),
     layout: {
       type: "hbox",
@@ -44,12 +48,23 @@ Ext.onReady(() => {
     ],
     listeners: {
       painted: function () {
-        Ext;
-        console.log("Ext: ", Ext);
         Ext.Msg.alert("Success!", "We have been rendered");
+      },
+      myniceevent: () => {
+        // the myniceevent is fired when the mouse is over the container.
+        Ext.Msg.alert("nice...");
       },
     },
   });
+
+  console.log("container: ", container);
+  container.el.on(
+    "mouseover",
+    function () {
+      this.fireEvent("myniceevent", container);
+    },
+    container
+  );
 
   //   console.log(Ext.ClassManager.aliasToName);
 });
