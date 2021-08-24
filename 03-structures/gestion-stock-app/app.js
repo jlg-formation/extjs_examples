@@ -43,6 +43,7 @@ try {
   console.log("e: ", e);
 }
 console.log("Employee count: " + GestionStockApp.utils.Employee.count);
+console.log("dany: ", dany);
 
 function removeSplash() {
   Ext.getBody().removeCls("launching");
