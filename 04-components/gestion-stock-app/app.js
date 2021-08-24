@@ -4,17 +4,19 @@ function removeSplash() {
   elem.parentNode.removeChild(elem);
 }
 
+Ext.define("forceTheDynamicLoaderToRequire", {
+  requires: ["Ext.MessageBox"],
+});
+
 Ext.onReady(() => {
   removeSplash();
-
-  console.log(Ext.ClassManager.aliasToName);
-
-  Ext.create("Ext.container.Container", {
+  console.log("on ready", Ext);
+  Ext.create("Ext.Container", {
+    renderTo: Ext.getBody(),
     layout: {
       type: "hbox",
     },
     width: 400,
-    renderTo: Ext.getBody(),
     border: 1,
     style: { borderColor: "#000000", borderStyle: "solid", borderWidth: "1px" },
     defaults: {
@@ -38,5 +40,14 @@ Ext.onReady(() => {
         fieldLabel: "End date",
       },
     ],
+    listeners: {
+      painted: function () {
+        Ext;
+        console.log("Ext: ", Ext);
+        Ext.Msg.alert("Success!", "We have been rendered");
+      },
+    },
   });
+
+  //   console.log(Ext.ClassManager.aliasToName);
 });
