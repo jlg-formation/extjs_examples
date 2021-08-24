@@ -15,9 +15,33 @@ Ext.define("GestionStockApp01.Application01", {
     this.removeSplash();
     const panel = Ext.create("Ext.Panel", {
       xtype: "truc",
-      title: "Truc",
+      title: "Titre du panel",
       iconCls: "svg-stock",
-      html: "The content",
+      html: "The content <b>of the panel</b>",
+      closable: true,
+      tools: [
+        {
+          type: "help",
+          handler: function () {
+            // show help here
+          },
+        },
+        {
+          itemId: "refresh",
+          type: "refresh",
+          hidden: true,
+          handler: function () {
+            // do refresh
+          },
+        },
+        {
+          type: "search",
+          handler: function (panel) {
+            // do search
+            panel.down("#refresh").show();
+          },
+        },
+      ],
     });
     Ext.Viewport.add([panel]);
   },
