@@ -7,6 +7,8 @@ function removeSplash() {
 Ext.onReady(() => {
   removeSplash();
 
+  console.log(Ext.ClassManager.aliasToName);
+
   Ext.create("Ext.container.Container", {
     layout: {
       type: "hbox",
