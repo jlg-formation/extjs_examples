@@ -10,6 +10,13 @@ Ext.define("forceTheDynamicLoaderToRequire", {
   requires: ["Ext.MessageBox"],
 });
 
+const panel = Ext.create("Ext.Panel", {
+  html: "coucou !!!",
+  title: "Hello",
+  xtype: "truc.panel",
+  labelWidth: 100,
+});
+
 // version:
 const version = Ext.getVersion().version;
 console.log("version: ", version);
@@ -45,6 +52,7 @@ Ext.onReady(() => {
         name: "endDate",
         fieldLabel: "End date",
       },
+      panel,
     ],
     listeners: {
       painted: function () {
