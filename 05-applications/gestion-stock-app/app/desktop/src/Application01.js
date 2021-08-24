@@ -16,6 +16,7 @@ Ext.define("GestionStockApp01.Application01", {
     const container = Ext.create("Ext.Panel", {
       xtype: "truc",
       title: "Truc",
+      iconCls: "x-fa fa-home",
       html: "The content",
     });
     Ext.Viewport.add([container]);
