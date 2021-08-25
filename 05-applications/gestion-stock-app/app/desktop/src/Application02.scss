@@ -12,7 +12,18 @@ body {
   }
 }
 
+.home-icon {
+  background-image: url("/resources/images/stock.svg");
+  background-size: 100% 100%;
+  background-position: 0% 0% !important;
+  background-repeat: no-repeat;
+}
+
 .btn-primary {
   color: $base-foreground-color;
   background-color: $base-color;
+}
+
+h1 {
+  text-align: center;
 }

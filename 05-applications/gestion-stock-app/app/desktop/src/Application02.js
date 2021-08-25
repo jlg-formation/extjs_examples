@@ -21,15 +21,9 @@ Ext.define("GestionStockApp02.Application02", {
           docked: "top",
           items: [
             {
-              xtype: "img",
-              src: "/resources/images/stock.svg",
-              height: 24,
-              width: 24,
-            },
-            {
-              xtype: "container",
-              padding: "0 10",
-              html: "Gestion Stock",
+              xtype: "button",
+              text: "Gestion Stock",
+              iconCls: "home-icon",
             },
           ],
         },
