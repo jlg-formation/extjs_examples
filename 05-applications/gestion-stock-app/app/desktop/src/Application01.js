@@ -14,10 +14,24 @@ Ext.define("GestionStockApp01.Application01", {
     console.log("launch");
     this.removeSplash();
     const panel = Ext.create("Ext.Panel", {
-      xtype: "truc",
       title: "Titre du panel",
       iconCls: "svg-stock",
-      html: "The content <b>of the panel</b>",
+      items: [
+        {
+          xtype: "toolbar",
+          dock: "top",
+          items: [
+            {
+              // the xtype by default for a toolbar is button (see toolbar defaultType property)
+              text: "Ajouter",
+            },
+            {
+              iconCls: "x-fa fa-redo",
+              xtype: "button",
+            },
+          ],
+        },
+      ],
       closable: true,
       tools: [
         {
@@ -44,5 +58,6 @@ Ext.define("GestionStockApp01.Application01", {
       ],
     });
     Ext.Viewport.add([panel]);
+    console.log("panel: ", panel);
   },
 });
