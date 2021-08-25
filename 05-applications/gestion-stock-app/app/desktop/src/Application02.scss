@@ -1,0 +1,18 @@
+body {
+  font-family: serif;
+}
+
+.header,
+.footer {
+  color: $base-foreground-color;
+  background-color: $base-color;
+
+  .x-button {
+    color: $base-foreground-color;
+  }
+}
+
+.btn-primary {
+  color: $base-foreground-color;
+  background-color: $base-color;
+}

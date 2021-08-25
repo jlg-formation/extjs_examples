@@ -1,5 +1,3 @@
-console.log("Application01");
-
 Ext.define("GestionStockApp01.Application01", {
   extend: "Ext.app.Application",
   name: "GestionStockApp01",
@@ -11,7 +9,7 @@ Ext.define("GestionStockApp01.Application01", {
   },
 
   launch: function () {
-    console.log("launch");
+    console.log("launch Application01");
     this.removeSplash();
     const panel = Ext.create("Ext.Panel", {
       title: "Titre du panel",
