@@ -1,11 +1,9 @@
-const nbr = "02";
-
 Ext.require("Ext.layout.VBox");
 Ext.require("Ext.MessageBox");
 
 Ext.application({
-  extend: `GestionStockApp02.Application02`,
-  name: `GestionStockApp02`,
+  extend: `GestionStockApp03.Application03`,
+  name: `GestionStockApp03`,
 });
 
 // Ext.application({
