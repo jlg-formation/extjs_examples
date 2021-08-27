@@ -2,8 +2,8 @@ Ext.require("Ext.layout.VBox");
 Ext.require("Ext.MessageBox");
 
 Ext.application({
-  extend: `GestionStockApp05.Application05`,
-  name: `GestionStockApp05`,
+  extend: `GestionStockApp06.Application06`,
+  name: `GestionStockApp06`,
 });
 
 // Ext.application({
