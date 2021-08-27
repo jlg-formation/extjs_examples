@@ -17,7 +17,9 @@ Ext.define("GestionStockApp07.Application07", {
       xtype: "dataview",
       fullscreen: true,
 
-      store: Ext.create("GestionStockApp.store.Users"),
+      store: {
+        xclass: "GestionStockApp.store.Users",
+      },
 
       itemTpl: "<div>{firstName} is {age} years old</div>",
     });
