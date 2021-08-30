@@ -1,10 +1,12 @@
 Ext.define("GestionStockApp.view.layout.HeaderView", {
-  extend: "Ext.Container",
+  extend: "Ext.Toolbar",
   xtype: "headerview",
+  cls: "headerview",
   items: [
     {
-      xtype: "panel",
-      html: "<p>Header Works!</p>",
+      xtype: "button",
+      text: "Gestion Stock",
+      iconCls: "header-icon",
     },
   ],
 });
