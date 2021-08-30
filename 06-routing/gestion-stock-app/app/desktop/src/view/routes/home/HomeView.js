@@ -1,4 +1,4 @@
-Ext.define("GestionStockApp.view.layout.HomeView", {
+Ext.define("GestionStockApp.view.routes.HomeView", {
   extend: "Ext.Container",
   xtype: "homeview",
   requires: ["Ext.Label"],
@@ -17,6 +17,10 @@ Ext.define("GestionStockApp.view.layout.HomeView", {
       cls: "btn-primary",
       text: "Voir le stock",
       scale: "large",
+      handler: function () {
+        const ctrl = this.up("mainview").getController();
+        ctrl.redirectTo("legal", true);
+      },
     },
   ],
 });
