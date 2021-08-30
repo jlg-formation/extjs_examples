@@ -6,6 +6,7 @@ Ext.define("GestionStockApp.view.routes.stock.ListView", {
     type: "vbox",
     align: "center",
   },
+  controller: { type: "stock_listviewcontroller" },
   items: [
     {
       xtype: "label",
@@ -32,9 +33,15 @@ Ext.define("GestionStockApp.view.routes.stock.ListView", {
           columnLines: true,
 
           selectable: {
-            columns: false, // Can select cells and rows, but not columns
-            extensible: true, // Uses the draggable selection extender
             checkbox: true,
+            // mode: "multi",
+            toggleOnClick: true,
+            deselectable: true,
+          },
+
+          listeners: {
+            select: "onSelect",
+            deselect: "onDeselect",
           },
 
           columns: [
