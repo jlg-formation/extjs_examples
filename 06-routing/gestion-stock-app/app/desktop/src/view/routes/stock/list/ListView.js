@@ -12,37 +12,51 @@ Ext.define("GestionStockApp.view.routes.stock.ListView", {
       html: "<h1>Liste des articles</h1>",
     },
     {
-      xtype: "grid",
+      xtype: "container",
       flex: 1,
-      title: "Liste des articles",
-
-      store: "Articles",
-      columnLines: true,
-
-      selectable: {
-        columns: false, // Can select cells and rows, but not columns
-        extensible: true, // Uses the draggable selection extender
-        checkbox: true,
+      layout: {
+        type: "vbox",
+        align: "left",
       },
+      items: [
+        {
+          xtype: "button",
+          text: "Ajouter",
+        },
+        {
+          xtype: "grid",
+          flex: 1,
+          title: "Liste des articles",
 
-      columns: [
-        {
-          text: "Nom",
-          dataIndex: "name",
-          width: 300,
-        },
-        {
-          text: "Prix",
-          dataIndex: "price",
-          width: 100,
-          align: "right",
-          renderer: Ext.util.Format.numberRenderer("0.00 €"),
-        },
-        {
-          text: "Quantité",
-          dataIndex: "qty",
-          align: "right",
-          width: 100,
+          store: "Articles",
+          columnLines: true,
+
+          selectable: {
+            columns: false, // Can select cells and rows, but not columns
+            extensible: true, // Uses the draggable selection extender
+            checkbox: true,
+          },
+
+          columns: [
+            {
+              text: "Nom",
+              dataIndex: "name",
+              width: 300,
+            },
+            {
+              text: "Prix",
+              dataIndex: "price",
+              width: 100,
+              align: "right",
+              renderer: Ext.util.Format.numberRenderer("0.00 €"),
+            },
+            {
+              text: "Quantité",
+              dataIndex: "qty",
+              align: "right",
+              width: 100,
+            },
+          ],
         },
       ],
     },
