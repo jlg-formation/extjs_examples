@@ -1,6 +1,6 @@
 Ext.define("GestionStockApp.view.routes.stock.ListView", {
   extend: "Ext.Container",
-  xtype: "stock.listview",
+  xtype: "stock_listview",
   requires: ["Ext.Label"],
   layout: {
     type: "vbox",
@@ -10,7 +10,7 @@ Ext.define("GestionStockApp.view.routes.stock.ListView", {
   items: [
     {
       xtype: "label",
-      html: "<h1>Ajout d'un article</h1>",
+      html: "<h1>Liste des articles</h1>",
     },
   ],
 });

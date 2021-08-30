@@ -19,7 +19,7 @@ Ext.define("GestionStockApp.view.routes.HomeView", {
       scale: "large",
       handler: function () {
         const ctrl = this.up("mainview").getController();
-        ctrl.redirectTo("legal", true);
+        ctrl.redirectTo("stock_list", true);
       },
     },
   ],
