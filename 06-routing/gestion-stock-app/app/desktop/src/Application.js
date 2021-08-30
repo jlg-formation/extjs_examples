@@ -3,6 +3,8 @@ Ext.define("GestionStockApp.Application", {
   name: "GestionStockApp",
   requires: ["GestionStockApp.*"],
   defaultToken: "home",
+  models: ["Article"],
+  stores: ["Articles"],
 
   removeSplash: function () {
     Ext.getBody().removeCls("launching");
