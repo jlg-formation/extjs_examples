@@ -11,6 +11,7 @@ Ext.define("GestionStockApp.view.MainView", {
     },
     {
       xtype: "bodyview",
+      reference: "bodyview",
     },
     {
       xtype: "footerview",
