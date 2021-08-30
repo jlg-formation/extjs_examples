@@ -2,7 +2,7 @@ Ext.define("GestionStockApp.Application", {
   extend: "Ext.app.Application",
   name: "GestionStockApp",
   requires: ["GestionStockApp.*"],
-  defaultToken: "homeview",
+  defaultToken: "home",
 
   removeSplash: function () {
     Ext.getBody().removeCls("launching");

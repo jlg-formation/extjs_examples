@@ -1,10 +1,16 @@
 Ext.define("GestionStockApp.view.layout.FooterView", {
-  extend: "Ext.Container",
+  extend: "Ext.Toolbar",
   xtype: "footerview",
+  controller: { type: "footerviewcontroller" },
+  layout: {
+    pack: "center",
+  },
+  cls: "footerview",
   items: [
     {
-      xtype: "panel",
-      html: "<p>Footer Works!</p>",
+      xtype: "button",
+      text: "Mentions Légales",
+      handler: "gotoLegal",
     },
   ],
 });
