@@ -30,7 +30,8 @@ Ext.define("GestionStockApp.view.stock.ListViewController", {
     console.log("vm: ", vm);
     const selectedArticles = vm.data.selectedArticles;
     console.log("about to remove items", selectedArticles);
-    const article = selectedArticles[0];
-    article.erase();
+    for (const a of selectedArticles) {
+      a.erase();
+    }
   },
 });
