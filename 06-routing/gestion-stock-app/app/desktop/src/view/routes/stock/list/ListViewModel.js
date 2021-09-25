@@ -6,10 +6,24 @@ Ext.define("GestionStockApp.view.stock.ListViewModel", {
     // We'll explain formulas in more detail soon.
     hasSelectedArticle: {
       bind: {
+        selectedArticles: "{selectedArticles}",
         selection: "{articleGrid.selection}",
       },
 
       get: function (data) {
+        console.log("hasSelectedArticle update");
+        console.log("data: ", data);
+        return data.selectedArticles.length > 0;
+      },
+    },
+
+    selectedArticles: {
+      bind: {
+        selection: "{articleGrid.selection}",
+      },
+
+      get: function (data) {
+        console.log("selectedArticles update");
         console.log("arguments", arguments, this);
         const view = this.getView();
         console.log("view: ", view);
@@ -18,7 +32,7 @@ Ext.define("GestionStockApp.view.stock.ListViewModel", {
         const selectable = grid.getSelectable();
         const items = selectable._selected.items;
         console.log("items: ", items);
-        return items.length > 0;
+        return items;
       },
     },
   },
