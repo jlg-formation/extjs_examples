@@ -4,4 +4,9 @@ Ext.define("GestionStockApp.store.Articles", {
   model: "GestionStockApp.model.Article",
 
   autoLoad: true,
+
+  proxy: {
+    type: "rest",
+    url: "http://localhost:3000/articles",
+  },
 });
