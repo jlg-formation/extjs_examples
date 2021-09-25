@@ -11,3 +11,5 @@ Ext.define("GestionStockApp.store.Articles", {
     reader: "json",
   },
 });
+
+var articleStore = Ext.create("GestionStockApp.store.Articles");
