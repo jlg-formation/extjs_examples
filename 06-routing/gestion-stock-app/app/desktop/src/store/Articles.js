@@ -6,7 +6,8 @@ Ext.define("GestionStockApp.store.Articles", {
   autoLoad: true,
 
   proxy: {
-    type: "rest",
+    type: "ajax",
     url: "http://localhost:3000/articles",
+    reader: "json",
   },
 });
