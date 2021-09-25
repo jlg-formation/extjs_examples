@@ -37,9 +37,7 @@ Ext.define("GestionStockApp.view.routes.stock.ListView", {
             {
               xtype: "button",
               text: "Supprimer",
-              handler: function () {
-                console.log("remove selected rows");
-              },
+              handler: "removeArticles",
               bind: {
                 hidden: "{!hasSelectedArticle}",
               },

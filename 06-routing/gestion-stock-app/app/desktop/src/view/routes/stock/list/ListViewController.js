@@ -24,4 +24,13 @@ Ext.define("GestionStockApp.view.stock.ListViewController", {
     const selection = selectable.getSelection();
     console.log("selection: ", selection);
   },
+
+  removeArticles() {
+    const vm = this.getViewModel();
+    console.log("vm: ", vm);
+    const selectedArticles = vm.data.selectedArticles;
+    console.log("about to remove items", selectedArticles);
+    const article = selectedArticles[0];
+    article.erase();
+  },
 });
