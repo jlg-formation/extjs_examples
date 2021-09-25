@@ -23,6 +23,10 @@ Ext.define("GestionStockApp.view.routes.stock.ListView", {
         {
           xtype: "button",
           text: "Ajouter",
+          handler: function () {
+            const ctrl = this.up("mainview").getController();
+            ctrl.redirectTo("stock_add", true);
+          },
         },
         {
           xtype: "grid",
