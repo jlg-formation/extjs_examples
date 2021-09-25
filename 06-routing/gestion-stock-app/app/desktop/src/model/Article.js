@@ -7,4 +7,9 @@ Ext.define("GestionStockApp.model.Article", {
     { name: "price", type: "float" },
     { name: "qty", type: "int" },
   ],
+
+  proxy: {
+    type: "rest",
+    url: "http://localhost:3000/articles",
+  },
 });

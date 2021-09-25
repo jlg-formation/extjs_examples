@@ -5,20 +5,15 @@ Ext.define("GestionStockApp.view.stock.AddViewController", {
   onSubmit: function () {
     const form = this.getView();
     console.log("form: ", form);
-
-    form.submit({
-      url: "http://localhost:3000/articles",
-      failure: function (form, result) {
-        // this is crazy because for a success,
-        // extJS requires a "success" property in the JSON returned...
-        // so for the success we check the failure method...
-        console.log("result: ", result);
-        console.log("form: ", form);
-        // refresh the store
-        articleStore.load();
-        const ctrl = form.up("mainview").getController();
-        ctrl.redirectTo("stock_list", true);
-      },
-    });
+    const values = form.getValues();
+    const article = Ext.create("GestionStockApp.model.Article", values);
+    article.save();
+    // reload the store
+    const store = Ext.StoreManager.lookup("Articles");
+    console.log("store: ", store);
+    store.load();
+    // redirect
+    const ctrl = form.up("mainview").getController();
+    ctrl.redirectTo("stock_list", true);
   },
 });

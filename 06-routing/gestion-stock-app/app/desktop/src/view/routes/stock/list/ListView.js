@@ -33,7 +33,7 @@ Ext.define("GestionStockApp.view.routes.stock.ListView", {
           flex: 1,
           title: "Liste des articles",
 
-          store: articleStore,
+          store: "Articles",
           columnLines: true,
 
           selectable: {
