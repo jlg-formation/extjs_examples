@@ -7,6 +7,9 @@ Ext.define("GestionStockApp.view.routes.stock.ListView", {
     align: "center",
   },
   controller: { type: "stock_listviewcontroller" },
+  viewModel: {
+    type: "stock_listviewmodel",
+  },
   items: [
     {
       xtype: "label",
@@ -21,17 +24,35 @@ Ext.define("GestionStockApp.view.routes.stock.ListView", {
       },
       items: [
         {
-          xtype: "button",
-          text: "Ajouter",
-          handler: function () {
-            const ctrl = this.up("mainview").getController();
-            ctrl.redirectTo("stock_add", true);
-          },
+          xtype: "panel",
+          items: [
+            {
+              xtype: "button",
+              text: "Ajouter",
+              handler: function () {
+                const ctrl = this.up("mainview").getController();
+                ctrl.redirectTo("stock_add", true);
+              },
+            },
+            {
+              xtype: "button",
+              text: "Supprimer",
+              handler: function () {
+                console.log("remove selected rows");
+              },
+              bind: {
+                hidden: "{!hasSelectedArticle}",
+              },
+              itemId: "remove-button",
+            },
+          ],
         },
         {
           xtype: "grid",
           flex: 1,
           title: "Liste des articles",
+
+          reference: "articleGrid",
 
           store: "Articles",
           columnLines: true,

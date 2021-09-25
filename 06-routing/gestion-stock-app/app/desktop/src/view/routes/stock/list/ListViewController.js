@@ -9,7 +9,13 @@ Ext.define("GestionStockApp.view.stock.ListViewController", {
     console.log("items: ", items);
     const selection = selectable.getSelection();
     console.log("selection: ", selection);
+
+    // const view = this.getView();
+    // const removeBtn = view.query("#remove-button")[0];
+    // console.log("removeBtn: ", removeBtn);
+    // removeBtn.show();
   },
+
   onDeselect: function (grid, selected, eOpts) {
     const selectable = grid.getSelectable();
     console.log("selectable: ", selectable);
