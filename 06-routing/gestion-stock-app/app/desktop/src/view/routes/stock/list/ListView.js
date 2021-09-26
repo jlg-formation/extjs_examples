@@ -1,7 +1,6 @@
 Ext.define("GestionStockApp.view.routes.stock.ListView", {
   extend: "Ext.Container",
   xtype: "stock_listview",
-  requires: ["Ext.Label", "Ext.grid.*", "Ext.grid.plugin.*"],
   layout: {
     type: "vbox",
     align: "center",
