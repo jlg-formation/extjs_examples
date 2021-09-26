@@ -2,6 +2,7 @@ Ext.define("GestionStockApp.view.routes.stock.ListView", {
   extend: "Ext.Container",
   xtype: "stock_listview",
   requires: ["Ext.Label", "Ext.grid.*", "Ext.grid.plugin.*"],
+  mixins: ["Ext.mixin.Responsive"],
   layout: {
     type: "vbox",
     align: "center",
@@ -49,6 +50,7 @@ Ext.define("GestionStockApp.view.routes.stock.ListView", {
           xtype: "grid",
           flex: 1,
           title: "Liste des articles",
+          width: 320,
 
           reference: "articleGrid",
 
@@ -71,12 +73,12 @@ Ext.define("GestionStockApp.view.routes.stock.ListView", {
             {
               text: "Nom",
               dataIndex: "name",
-              width: 300,
+              width: 120,
             },
             {
               text: "Prix",
               dataIndex: "price",
-              width: 100,
+              width: 80,
               align: "right",
               renderer: Ext.util.Format.numberRenderer("0.00 €"),
             },
@@ -84,7 +86,7 @@ Ext.define("GestionStockApp.view.routes.stock.ListView", {
               text: "Quantité",
               dataIndex: "qty",
               align: "right",
-              width: 100,
+              width: 80,
             },
           ],
         },
