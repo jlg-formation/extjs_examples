@@ -7,6 +7,8 @@ Ext.define("GestionStockApp.view.stock.AddViewController", {
     console.log("form: ", form);
     const values = form.getValues();
     const article = Ext.create("GestionStockApp.model.Article", values);
+    console.log("article: ", article);
+    console.log("article.id: ", article.id);
     article.save();
     // reload the store
     const store = Ext.StoreManager.lookup("Articles");
